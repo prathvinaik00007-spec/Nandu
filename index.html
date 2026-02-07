@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rose Day</title>
+<title>Happy Rose Day</title>
 
 <style>
 *{
@@ -19,44 +19,43 @@ body{
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  position:relative;
+  padding:40px 0;
   overflow:hidden;
+  position:relative;
 }
 
-/* WRAPPER TO CREATE BLEND */
+/* -------- ROSE DAY BANNER WITH BLEND -------- */
 .rose-wrap{
   position:relative;
-  margin-bottom:25px;
+  margin-bottom:40px;
 }
 
-/* SOFT BLEND GLOW */
 .rose-wrap::before{
   content:"";
   position:absolute;
-  inset:-30px;
+  inset:-40px;
   background:#ff4d6d;
-  filter:blur(45px);
-  opacity:0.6;
+  filter:blur(50px);
+  opacity:0.55;
+  border-radius:30px;
   z-index:0;
-  border-radius:20px;
 }
 
-/* ROSE TEXT IMAGE */
 .rose-text{
   position:relative;
-  width:85vw;
-  max-width:500px;
+  width:90vw;
+  max-width:600px;
   z-index:1;
 }
 
-/* BOUQUET */
+/* -------- BOUQUET -------- */
 .bouquet{
-  width:75vw;
-  max-width:420px;
-  z-index:2;
+  width:80vw;
+  max-width:450px;
+  z-index:1;
 }
 
-/* HEART OUTLINES */
+/* -------- HEART OUTLINES -------- */
 .heart{
   position:absolute;
   width:16px;
@@ -77,13 +76,26 @@ body{
   border-radius:50%;
 }
 
-.heart::before{ top:-10px; left:-2px; }
-.heart::after{ left:-10px; top:-2px; }
+.heart::before{
+  top:-10px;
+  left:-2px;
+}
+
+.heart::after{
+  left:-10px;
+  top:-2px;
+}
 
 @keyframes float{
-  0%{ transform:translateY(0) rotate(45deg); opacity:0; }
+  0%{
+    transform:translateY(0) rotate(45deg);
+    opacity:0;
+  }
   30%{ opacity:0.7; }
-  100%{ transform:translateY(-250px) rotate(45deg); opacity:0; }
+  100%{
+    transform:translateY(-260px) rotate(45deg);
+    opacity:0;
+  }
 }
 </style>
 </head>
@@ -91,13 +103,13 @@ body{
 <body>
 
 <!-- HEARTS -->
-<div class="heart" style="left:12%; bottom:-30px;"></div>
-<div class="heart" style="left:28%; bottom:-40px; animation-delay:1s;"></div>
-<div class="heart" style="left:50%; bottom:-35px; animation-delay:2s;"></div>
-<div class="heart" style="left:70%; bottom:-45px; animation-delay:3s;"></div>
-<div class="heart" style="left:88%; bottom:-30px; animation-delay:4s;"></div>
+<div class="heart" style="left:10%; bottom:-40px;"></div>
+<div class="heart" style="left:25%; bottom:-30px; animation-delay:1s;"></div>
+<div class="heart" style="left:45%; bottom:-50px; animation-delay:2s;"></div>
+<div class="heart" style="left:65%; bottom:-35px; animation-delay:3s;"></div>
+<div class="heart" style="left:85%; bottom:-45px; animation-delay:4s;"></div>
 
-<!-- BLENDED ROSE TEXT -->
+<!-- ROSE DAY TEXT -->
 <div class="rose-wrap">
   <img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
 </div>
