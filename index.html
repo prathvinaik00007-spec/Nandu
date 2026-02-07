@@ -12,40 +12,40 @@
   box-sizing:border-box;
 }
 
-/* 🌸 FULL-PAGE SOFT RED–PINK BACKGROUND (EVERYWHERE) */
+/* 🌸 ONE UNIFIED BACKGROUND SECTION */
 body{
   min-height:100vh;
-  background:
-    radial-gradient(
-      circle at center,
-      #ff5c8a 0%,
-      #ff85a8 35%,
-      #ffb3c7 60%,
-      #ffd6e5 80%,
-      #ffe4ef 100%
-    );
+  background:radial-gradient(
+    ellipse at top center,
+    #b3002d 0%,
+    #d6003f 25%,
+    #ff7fa6 45%,
+    #ffb3c7 65%,
+    #ffd6e5 85%,
+    #ffe4ef 100%
+  );
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:60px;
+  gap:70px;
   overflow:hidden;
   position:relative;
 }
 
-/* ROSE TEXT IMAGE */
+/* LOGO */
 .rose-text{
   width:85vw;
   max-width:520px;
 }
 
-/* BOUQUET IMAGE */
+/* BOUQUET */
 .bouquet{
   width:80vw;
   max-width:460px;
 }
 
-/* 💗 HEARTS – VERY SUBTLE */
+/* 💗 SUBTLE FLOATING HEARTS */
 .heart{
   position:absolute;
   width:14px;
@@ -59,7 +59,7 @@ body{
 @keyframes float{
   0%{ transform:translateY(0); opacity:0; }
   30%{ opacity:0.25; }
-  100%{ transform:translateY(-380px); opacity:0; }
+  100%{ transform:translateY(-360px); opacity:0; }
 }
 </style>
 </head>
@@ -67,16 +67,16 @@ body{
 <body>
 
 <!-- HEARTS -->
-<div class="heart" style="left:10%; bottom:-60px;"></div>
-<div class="heart" style="left:30%; bottom:-80px; animation-delay:2s;"></div>
-<div class="heart" style="left:50%; bottom:-70px; animation-delay:4s;"></div>
-<div class="heart" style="left:70%; bottom:-90px; animation-delay:6s;"></div>
-<div class="heart" style="left:90%; bottom:-60px; animation-delay:8s;"></div>
+<div class="heart" style="left:12%; bottom:-60px;"></div>
+<div class="heart" style="left:32%; bottom:-80px; animation-delay:2s;"></div>
+<div class="heart" style="left:52%; bottom:-70px; animation-delay:4s;"></div>
+<div class="heart" style="left:72%; bottom:-90px; animation-delay:6s;"></div>
+<div class="heart" style="left:88%; bottom:-60px; animation-delay:8s;"></div>
 
-<!-- HAPPY ROSE DAY -->
+<!-- LOGO (STRONGER RED AREA ABOVE) -->
 <img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
 
-<!-- BOUQUET -->
+<!-- BOUQUET (SOFTER PINK AREA BELOW) -->
 <img src="bouquet.png" class="bouquet" alt="Bouquet">
 
 </body>
