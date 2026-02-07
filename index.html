@@ -14,58 +14,64 @@
 
 body{
   min-height:100vh;
-  background:#ffe4ef;
+  background:#ffe4ef; /* MAIN BACKGROUND */
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:40px;
+  gap:50px;
   overflow:hidden;
   position:relative;
 }
 
-/* ---------- RED BLEND BACKGROUND FOR TEXT ---------- */
+/* -------- RED BLEND BACKGROUND (PERFECT MATCH) -------- */
 .rose-bg{
-  position:relative;
-  padding:40px 60px;
+  padding:55px 80px;
   background:radial-gradient(
     ellipse at center,
     #b3002d 0%,
-    #d6003f 40%,
-    #ff9bb8 70%,
+    #d6003f 30%,
+    #ff7fa6 55%,
+    #ffd6e5 75%,
     #ffe4ef 100%
   );
-  border-radius:18px;
+  border-radius:40px;
 }
 
-/* TEXT IMAGE */
+/* ROSE TEXT IMAGE */
 .rose-text{
   width:85vw;
   max-width:520px;
   display:block;
 }
 
-/* ---------- BOUQUET ---------- */
+/* BOUQUET IMAGE */
 .bouquet{
   width:80vw;
   max-width:460px;
 }
 
-/* ---------- HEARTS (CLEAN & SIMPLE) ---------- */
+/* -------- HEARTS (CUTE, CLEAN, SUBTLE) -------- */
 .heart{
   position:absolute;
   width:14px;
   height:14px;
-  border:2px solid #ff7eb9;
+  border:2px solid #ff8fb5;
   border-radius:50%;
-  animation:float 10s infinite ease-in-out;
+  animation:float 11s infinite ease-in-out;
   opacity:0.35;
 }
 
 @keyframes float{
-  0%{ transform:translateY(0); opacity:0; }
+  0%{
+    transform:translateY(0);
+    opacity:0;
+  }
   30%{ opacity:0.35; }
-  100%{ transform:translateY(-320px); opacity:0; }
+  100%{
+    transform:translateY(-340px);
+    opacity:0;
+  }
 }
 </style>
 </head>
@@ -73,12 +79,13 @@ body{
 <body>
 
 <!-- HEARTS -->
-<div class="heart" style="left:15%; bottom:-40px;"></div>
-<div class="heart" style="left:35%; bottom:-60px; animation-delay:1s;"></div>
-<div class="heart" style="left:55%; bottom:-50px; animation-delay:2s;"></div>
-<div class="heart" style="left:75%; bottom:-70px; animation-delay:3s;"></div>
+<div class="heart" style="left:12%; bottom:-50px;"></div>
+<div class="heart" style="left:28%; bottom:-60px; animation-delay:1s;"></div>
+<div class="heart" style="left:45%; bottom:-55px; animation-delay:2s;"></div>
+<div class="heart" style="left:62%; bottom:-65px; animation-delay:3s;"></div>
+<div class="heart" style="left:80%; bottom:-50px; animation-delay:4s;"></div>
 
-<!-- ROSE DAY TEXT WITH RED BLEND -->
+<!-- ROSE DAY TEXT WITH PERFECT BLEND -->
 <div class="rose-bg">
   <img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
 </div>
