@@ -13,36 +13,43 @@
 }
 
 body{
-  height:100vh;
+  min-height:100vh;
   background:#ffe4ef;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
-  overflow:hidden;
+  justify-content:center;
   position:relative;
+  overflow:hidden;
 }
 
-/* BLENDED ROSE DAY BANNER */
+/* WRAPPER TO CREATE BLEND */
+.rose-wrap{
+  position:relative;
+  margin-bottom:25px;
+}
+
+/* SOFT BLEND GLOW */
+.rose-wrap::before{
+  content:"";
+  position:absolute;
+  inset:-30px;
+  background:#ff4d6d;
+  filter:blur(45px);
+  opacity:0.6;
+  z-index:0;
+  border-radius:20px;
+}
+
+/* ROSE TEXT IMAGE */
 .rose-text{
+  position:relative;
   width:85vw;
   max-width:500px;
-  margin-bottom:25px;
-
-  /* edge blending */
-  -webkit-mask-image: radial-gradient(
-    circle at center,
-    black 70%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    circle at center,
-    black 70%,
-    transparent 100%
-  );
+  z-index:1;
 }
 
-/* BIG BOUQUET */
+/* BOUQUET */
 .bouquet{
   width:75vw;
   max-width:420px;
@@ -70,26 +77,13 @@ body{
   border-radius:50%;
 }
 
-.heart::before{
-  top:-10px;
-  left:-2px;
-}
-
-.heart::after{
-  left:-10px;
-  top:-2px;
-}
+.heart::before{ top:-10px; left:-2px; }
+.heart::after{ left:-10px; top:-2px; }
 
 @keyframes float{
-  0%{
-    transform:translateY(0) rotate(45deg);
-    opacity:0;
-  }
-  30%{opacity:0.7;}
-  100%{
-    transform:translateY(-250px) rotate(45deg);
-    opacity:0;
-  }
+  0%{ transform:translateY(0) rotate(45deg); opacity:0; }
+  30%{ opacity:0.7; }
+  100%{ transform:translateY(-250px) rotate(45deg); opacity:0; }
 }
 </style>
 </head>
@@ -97,18 +91,19 @@ body{
 <body>
 
 <!-- HEARTS -->
-<div class="heart" style="left:10%; bottom:-20px;"></div>
-<div class="heart" style="left:25%; bottom:-40px; animation-delay:1s;"></div>
-<div class="heart" style="left:40%; bottom:-30px; animation-delay:2s;"></div>
-<div class="heart" style="left:60%; bottom:-50px; animation-delay:3s;"></div>
-<div class="heart" style="left:75%; bottom:-25px; animation-delay:4s;"></div>
-<div class="heart" style="left:90%; bottom:-35px; animation-delay:5s;"></div>
+<div class="heart" style="left:12%; bottom:-30px;"></div>
+<div class="heart" style="left:28%; bottom:-40px; animation-delay:1s;"></div>
+<div class="heart" style="left:50%; bottom:-35px; animation-delay:2s;"></div>
+<div class="heart" style="left:70%; bottom:-45px; animation-delay:3s;"></div>
+<div class="heart" style="left:88%; bottom:-30px; animation-delay:4s;"></div>
 
-<!-- YOUR BLENDED BANNER -->
-<img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
+<!-- BLENDED ROSE TEXT -->
+<div class="rose-wrap">
+  <img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
+</div>
 
-<!-- YOUR BOUQUET -->
+<!-- BOUQUET -->
 <img src="bouquet.png" class="bouquet" alt="Bouquet">
 
 </body>
-  </html>
+</html>
