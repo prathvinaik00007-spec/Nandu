@@ -12,10 +12,18 @@
   box-sizing:border-box;
 }
 
-/* 🌸 FULL PAGE = ONLY LIGHT PINK */
+/* 🌸 FULL-PAGE SOFT RED–PINK BACKGROUND (EVERYWHERE) */
 body{
   min-height:100vh;
-  background:#ffe4ef;
+  background:
+    radial-gradient(
+      circle at center,
+      #ff5c8a 0%,
+      #ff85a8 35%,
+      #ffb3c7 60%,
+      #ffd6e5 80%,
+      #ffe4ef 100%
+    );
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -25,48 +33,33 @@ body{
   position:relative;
 }
 
-/* 🔴 RED BLEND ONLY FOR TEXT AREA */
-.rose-bg{
-  padding:55px 80px;
-  background:radial-gradient(
-    ellipse at center,
-    #b3002d 0%,
-    #d6003f 30%,
-    #ff7fa6 55%,
-    #ffd6e5 75%,
-    #ffe4ef 100%
-  );
-  border-radius:40px;
-}
-
-/* TEXT IMAGE */
+/* ROSE TEXT IMAGE */
 .rose-text{
   width:85vw;
   max-width:520px;
-  display:block;
 }
 
-/* BOUQUET */
+/* BOUQUET IMAGE */
 .bouquet{
   width:80vw;
   max-width:460px;
 }
 
-/* 💗 HEARTS — VERY SUBTLE, PINK ONLY */
+/* 💗 HEARTS – VERY SUBTLE */
 .heart{
   position:absolute;
   width:14px;
   height:14px;
-  border:2px solid rgba(255,150,180,0.4);
+  border:2px solid rgba(255,255,255,0.35);
   border-radius:50%;
   animation:float 14s infinite ease-in-out;
-  opacity:0.3;
+  opacity:0.25;
 }
 
 @keyframes float{
   0%{ transform:translateY(0); opacity:0; }
-  30%{ opacity:0.3; }
-  100%{ transform:translateY(-360px); opacity:0; }
+  30%{ opacity:0.25; }
+  100%{ transform:translateY(-380px); opacity:0; }
 }
 </style>
 </head>
@@ -74,18 +67,16 @@ body{
 <body>
 
 <!-- HEARTS -->
-<div class="heart" style="left:12%; bottom:-60px;"></div>
-<div class="heart" style="left:32%; bottom:-80px; animation-delay:2s;"></div>
-<div class="heart" style="left:52%; bottom:-70px; animation-delay:4s;"></div>
-<div class="heart" style="left:72%; bottom:-90px; animation-delay:6s;"></div>
-<div class="heart" style="left:88%; bottom:-60px; animation-delay:8s;"></div>
+<div class="heart" style="left:10%; bottom:-60px;"></div>
+<div class="heart" style="left:30%; bottom:-80px; animation-delay:2s;"></div>
+<div class="heart" style="left:50%; bottom:-70px; animation-delay:4s;"></div>
+<div class="heart" style="left:70%; bottom:-90px; animation-delay:6s;"></div>
+<div class="heart" style="left:90%; bottom:-60px; animation-delay:8s;"></div>
 
-<!-- 🔴 RED BLEND ONLY HERE -->
-<div class="rose-bg">
-  <img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
-</div>
+<!-- HAPPY ROSE DAY -->
+<img src="rose-text.png" class="rose-text" alt="Happy Rose Day">
 
-<!-- 🌸 NORMAL PAGE BACKGROUND BELOW -->
+<!-- BOUQUET -->
 <img src="bouquet.png" class="bouquet" alt="Bouquet">
 
 </body>
